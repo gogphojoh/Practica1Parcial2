@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .navbar, .card-header {
+            background-color: #161b22;
+            border-color: #30363d;
+        }
+        .form-control, .btn {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            border-color: #30363d;
+        }
+        .form-control::placeholder {
+            color: #8b949e;
+        }
+        .btn-primary {
+            background-color: #238636;
+            border-color: #238636;
+        }
+        .btn-primary:hover {
+            background-color: #2ea043;
+            border-color: #2ea043;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-warning {
+            background-color: #d29922;
+            border-color: #d29922;
+        }
+        .btn-danger {
+            background-color: #d73a49;
+            border-color: #d73a49;
+        }
+        .list-group-item {
+            background-color: #161b22;
+            border-color: #30363d;
+            color: #c9d1d9;
+        }
+        .task-completed {
+            background-color: #2ea043;
+            color: white;
+        }
+        .task-expired {
+            background-color: #d73a49;
+            color: white;
+        }
+        .task-pending {
+            background-color: #161b22;
+            color: #c9d1d9;
+        }
+        #error-message {
+            margin-top: 10px;
+            color: #d73a49;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .row {
+            display: flex;
+        }
+        .card {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark">
+        <a class="navbar-brand" href="#">Gestión de Tareas</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" id="searchTerm" placeholder="Buscar tarea o responsable" aria-label="Buscar">
+        </form>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Agregar Nueva Tarea</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="prueba">
+                            <div class="form-group">
+                                <label for="tarean">Nombre de la Tarea</label>
+                                <input type="text" class="form-control" id="tarean" name="tarean" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fechai">Fecha de Asignación</label>
+                                <input type="date" class="form-control" id="fechai" name="fechai" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fechaf">Fecha de Entrega</label>
+                                <input type="date" class="form-control" id="fechaf" name="fechaf" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Persona Responsable</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            <div id="error-message" class="text-danger"></div>
+                            <button type="submit" class="btn btn-primary">Agregar tarea</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Lista de Tareas</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul id="taskList" class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

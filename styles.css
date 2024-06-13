@@ -1,0 +1,82 @@
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.navbar, .card-header {
+    background-color: #161b22;
+    border-color: #30363d;
+}
+
+.form-control, .btn {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    border-color: #30363d;
+}
+
+.form-control::placeholder {
+    color: #8b949e;
+}
+
+.btn-primary {
+    background-color: #238636;
+    border-color: #238636;
+}
+
+.btn-primary:hover {
+    background-color: #2ea043;
+    border-color: #2ea043;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-warning {
+    background-color: #d29922;
+    border-color: #d29922;
+}
+
+.btn-danger {
+    background-color: #d73a49;
+    border-color: #d73a49;
+}
+
+.list-group-item {
+    background-color: #161b22;
+    border-color: #30363d;
+    color: #c9d1d9;
+}
+
+.task-completed {
+    background-color: #2ea043;
+    color: white;
+}
+
+.task-expired {
+    background-color: #d73a49;
+    color: white;
+}
+
+.task-pending {
+    background-color: #161b22;
+    color: #c9d1d9;
+}
+
+#error-message {
+    margin-top: 10px;
+    color: #d73a49;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.row {
+    display: flex;
+}
+
+.card {
+    flex-grow: 1;
+}
